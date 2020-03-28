@@ -19541,3 +19541,92 @@ Copyright (c) 2015 Daniel Eden
 
 
 /********************************* Added code *****************************/
+
+.tablink {
+  background-color: #725d7f;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  margin-top: 20px;
+}
+
+.tablink:focus {
+  outline: none;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+#defaultOpen {
+  margin-left: 20px;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  margin-top: 72px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #84a3c3;
+}
+
+
+.current-content {
+  display: block;
+  box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.7), 2px -2px 5px rgba(128, 128, 128, 0.7);
+  z-index: 2;
+}
+
+
+
+
+.section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 20px;
+}
+
+.section-item {
+  margin: 20px;
+}
+
+.section label {
+  font-family: Montserrat-Bold;
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+.section input {
+  font-family: Montserrat-Regular;
+  color: white;
+  width: 100%;
+  vertical-align: middle;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  min-height: 45px;
+  transition: all 0.2s ease-in-out;
+}
+
+.section input:focus {
+  border-bottom: 2px solid #F4EBC8;
+}
+
+.section input::placeholder {
+  font-family: Montserrat-Regular;
+  line-height: 30px;
+  vertical-align: middle;
+  color: rgb(255, 255, 255);
+}
