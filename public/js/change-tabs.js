@@ -22,3 +22,23 @@ function openPage(pageName, elmnt, color) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+
+//functions and variables to display search content on search bar focus
+var searchContent = document.getElementById('search-content');
+
+var getHeight = function() {
+  searchContent.style.display = 'block';
+  var height = searchContent.scrollHeight + 'px';
+  searchContent.style.display = 'none';
+  return height;
+}
+
+function displayItems() {
+  searchContent.classList.add('is-visible');
+}
+
+function hideItems() {
+  searchContent.classList.remove('is-visible');
+}

@@ -80,6 +80,41 @@
               <input type="text" name="father-name" id="father-name" placeholder="Father's Name">
             </div>
           </div>
+          <div class="section">
+            <div class="section-itedisplaySearchItems()m map-search">
+              <label for="sub-centre">Sub-Centre</label>
+              <input type="search" name="sub-centre" id="sub-centre" placeholder="Nearest Sub-Centre">
+              <i class="material-icons" onclick="MapLinkClicked">location_on</i>
+              <!-- <div id="map"></div> -->
+            </div>
+          </div>
+          <div class="section vaccines">
+            <div class="section-item vaccine-list">
+              <label for="vaccine-search">Vaccines</label>
+              <div class="add-vaccine-group">
+                <input type="search" class="vaccine-search-class" id="vaccine-search" placeholder="Enter vaccine name" onfocusin="displayItems()" onfocusout="hideItems()">
+                <button id="add-vaccine">Add</button>
+                <button id="cancel-vaccine">Cancel</button>
+                <div class="search-content" id="search-content">
+                  <ul>
+                    <li><a href="#">1</a></li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="submit-section">
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
       
@@ -95,6 +130,7 @@
 
 
   <script src="js/change-tabs.js"></script>
+  <script src="js/map.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 

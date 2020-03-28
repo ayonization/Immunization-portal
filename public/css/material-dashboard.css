@@ -19543,6 +19543,7 @@ Copyright (c) 2015 Daniel Eden
 /********************************* Added code *****************************/
 
 .tablink {
+  font-family: Poppins-Regular;
   background-color: #725d7f;
   color: white;
   float: left;
@@ -19553,6 +19554,9 @@ Copyright (c) 2015 Daniel Eden
   font-size: 17px;
   width: 25%;
   margin-top: 20px;
+  margin-right: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .tablink:focus {
@@ -19572,7 +19576,7 @@ Copyright (c) 2015 Daniel Eden
   color: black;
   display: none;
   padding: 100px 20px;
-  height: 100%;
+  /* height: 100%; */
   margin-top: 72px;
   margin-left: 20px;
   margin-right: 20px;
@@ -19584,16 +19588,22 @@ Copyright (c) 2015 Daniel Eden
   display: block;
   box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.7), 2px -2px 5px rgba(128, 128, 128, 0.7);
   z-index: 2;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-height: 88vh;
+  margin-bottom: 20px;
 }
 
 
 
 
 .section {
-  width: 100%;
+  width: 98.5%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-column-gap: 20px;
+  margin: 20px 0;
 }
 
 .section-item {
@@ -19630,3 +19640,112 @@ Copyright (c) 2015 Daniel Eden
   vertical-align: middle;
   color: rgb(255, 255, 255);
 }
+
+.map-search {
+  display: flex;
+  align-items: flex-end;
+}
+
+.map-search label {
+  width: 50%;
+}
+
+.map-search input {
+  width: 90%;
+}
+
+.map-search i {
+  margin-left: 5px;
+  color: white;
+  font-size: 40px;
+}
+
+.map-search i:hover {
+  text-shadow: 1px 1px 5px rgba(234, 234, 234, 0.4), -1px -1px 5px rgba(234, 234, 234, 0.4);
+}
+
+@media screen and (max-width: 400px) {
+  .current-content {
+    height: 100vh;
+  }
+
+  .map-search i {
+    display: none;
+  }
+
+  .map-search input {
+    width: 100%;
+  }
+  .section {
+    display: block;
+  }
+
+  .section-item {
+    display: block;
+    width: 90%;
+  }
+}
+
+.vaccines {
+  display: block;
+  width: 100%;
+}
+
+
+.add-vaccine-group {
+  display: grid;
+  grid-template-columns: 57% 20% 20%;
+  grid-column-gap: 20px;
+  /* outline: 1px dashed rgba(255, 255, 255, 0.4); */
+  padding: 15px;
+}
+
+
+.add-vaccine-group button {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.add-vaccine-group button:hover, .add-vaccine-group button:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7), -1px -1px 10px rgba(132, 163, 195, 0.7);
+}
+
+.search-content {
+  display: none;
+  height: 0;
+  transition: height 350ms ease-in-out;
+}
+
+.search-content ul {
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 5px;
+  box-shadow: 3px 1px 5px rgba(255, 255, 255, 0.3);
+  width: 90%;
+  height: 300px;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.search-content ul li {
+  margin-left: -40px;
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.is-visible {
+  display: block;
+  height: auto;
+}
+
+
+/* #map {
+  width: 100%;
+  margin: 20px;
+  position: absolute;
+  visibility: hidden;
+} */
