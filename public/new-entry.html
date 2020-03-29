@@ -59,15 +59,15 @@
       <button class="tablink" onclick="openPage('parent', this)">Parent</button>
 
       <div id="child" class="tabcontent">
-        <form action="new-entry.html" method="get">
+        <form action="new-entry.html" method="get" autocomplete="off">
           <div class="section">
             <div class="section-item">
               <label for="child-name">Full Name</label>
-              <input type="text" name="child-name" id="child-name" placeholder="Name">
+              <input type="text" name="child-name" id="child-name" placeholder="Name" required>
             </div>
             <div class="section-item">
               <label for="parent-name">Date of Birth</label>
-              <input type="date" name="dob" id="date-of-birth">
+              <input type="date" name="dob" id="date-of-birth" required>
             </div>
           </div>
           <div class="section">
@@ -81,46 +81,74 @@
             </div>
           </div>
           <div class="section">
-            <div class="section-itedisplaySearchItems()m map-search">
+            <div class="section-item map-search">
               <label for="sub-centre">Sub-Centre</label>
-              <input type="search" name="sub-centre" id="sub-centre" placeholder="Nearest Sub-Centre">
+              <input type="search" name="sub-centre" id="sub-centre" placeholder="Nearest Sub-Centre" required>
               <i class="material-icons" onclick="MapLinkClicked">location_on</i>
               <!-- <div id="map"></div> -->
+            </div>
+            <div class="section-item">
+              <label for="parent-id">Parent ID</label>
+              <input type="text" name="parent-id" id="parent-id" placeholder="Enter parent ID here" required>
             </div>
           </div>
           <div class="section vaccines">
             <div class="section-item vaccine-list">
               <label for="vaccine-search">Vaccines</label>
               <div class="add-vaccine-group">
-                <input type="search" class="vaccine-search-class" id="vaccine-search" placeholder="Enter vaccine name" onfocusin="displayItems()" onfocusout="hideItems()">
-                <button id="add-vaccine">Add</button>
-                <button id="cancel-vaccine">Cancel</button>
-                <div class="search-content" id="search-content">
-                  <ul>
-                    <li><a href="#">1</a></li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
+                <input type="search" class="vaccine-search-class" id="vaccine-search" placeholder="Enter vaccine name" onfocusin="displayItems()" onfocusout="hideItems()" onkeyup="searchQuery()">
+                <input type="date" name="vaccine-date" id="vaccine-date">
+                <button type="button" id="add-vaccine" data-action="add-vaccine">Add</button>
+                <!-- <button id="cancel-vaccine">Cancel</button> -->
+                <div class="search-menu scroller" id="search-menu">
+                  <ul id="search-content">
+                    <li>Apple</li>
+                    <li>Ball</li>
+                    <li>Cat</li>
+                    <li>Duck</li>
+                    <li>Elephant</li>
+                    <li>Aunty</li>
+                    <li>Basic</li>
+                    <li>Claw</li>
+                    <li>Custard</li>
+                    <li>Mustard</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="submit-section">
-            <button type="submit">Submit</button>
+          <div class="section-item submit-section">
+            <button type="submit" id="child-submit-btn">Submit</button>
           </div>
         </form>
       </div>
       
       <div id="parent" class="tabcontent">
-        <h3>News</h3>
-        <p>Some news this fine day!</p>
+        <form action="new-entry.html" method="get" autocomplete="off">
+          <div class="section">
+            <div class="section-item">
+              <label for="child-name">Full Name</label>
+              <input type="text" name="child-name" id="child-name" placeholder="Name">
+            </div>
+            <div class="section-item">
+              <label for="parent-name">Date of Birth</label>
+              <input type="date" name="dob" id="date-of-birth">
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-item">
+              <label for="mother-name">Husband</label>
+              <input type="text" name="husband-name" id="husband-name" placeholder="Husband's Name">
+            </div>
+            <div class="section-item">
+              <label for="father-name">Phone Number</label>
+              <input type="tel" name="contact-no" id="contact-no" placeholder="+91 94348 85246" onfocus="inputSTDCode()" onkeypress="displayPhoneNumber()" maxlength="15">
+            </div>
+          </div>
+          <div class="section-item submit-section">
+            <button type="submit" id="parent-submit-btn">Submit</button>
+          </div>
+        </form>
       </div>
       
 
@@ -131,6 +159,7 @@
 
   <script src="js/change-tabs.js"></script>
   <script src="js/map.js"></script>
+  <script src="js/add-vaccine.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 

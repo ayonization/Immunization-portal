@@ -26,19 +26,14 @@ document.getElementById("defaultOpen").click();
 
 
 //functions and variables to display search content on search bar focus
-var searchContent = document.getElementById('search-content');
-
-var getHeight = function() {
-  searchContent.style.display = 'block';
-  var height = searchContent.scrollHeight + 'px';
-  searchContent.style.display = 'none';
-  return height;
-}
+var searchMenu = document.getElementById('search-menu');
 
 function displayItems() {
-  searchContent.classList.add('is-visible');
+  searchMenu.classList.add('is-visible');
 }
 
 function hideItems() {
-  searchContent.classList.remove('is-visible');
+  searchMenu.classList.remove('is-visible');
 }
+
+
